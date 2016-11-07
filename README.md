@@ -9,8 +9,7 @@ The purpose of this repo is to update the exercises to ES6 standards.
 
 ## Examples covers
 
-**Noº** | **Type**
----  ---
-1.- | Array
---- ---
-2.- | Lists
+| **Num** | **Type** |
+--- | ---
+| 1.- | Array |
+| 2.- | Lists |
