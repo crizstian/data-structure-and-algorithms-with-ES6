@@ -70,6 +70,7 @@ let e2   = exp2.split('');
 e2 = e2.filter(item => item !== ' ');
 let balanced2 = checkBalancedExpression(e2)
 
+console.log('CHAPTER 4');
 console.log('### Excercise 1');
 console.log(`Expression example: ${exp}`);
 (balanced) ? console.log('The expression is balanced') : console.log('The expression is no balanced');
