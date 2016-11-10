@@ -1,0 +1,4 @@
+alfa: Nombre de la primera letra del alfabeto griego; se escribe Α/α;la alfa es una vocal que se transcribe como la 'a' latina.
+Alfabeto: El alfabeto o abecedario de una lengua o idioma es el conjunto ordenado de sus letras.
+Alfaro: Alfaro es una ciudad y municipio español perteneciente a la comunidad autónoma de La Rioja (España).
+alfaguara: Manantial de agua muy abundante que surge con violencia.

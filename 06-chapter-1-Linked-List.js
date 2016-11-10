@@ -1,3 +1,4 @@
+// Node Linked List member class example
 class Node {
   constructor(element = 'Head', next = null) {
     this.element = element;
@@ -5,6 +6,7 @@ class Node {
   }
 }
 
+// Linked List data structure class example
 class LList {
   constructor(head = new Node()) {
     this.head = head;

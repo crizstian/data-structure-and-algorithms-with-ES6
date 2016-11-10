@@ -18,12 +18,13 @@ The purpose of this repo is to update the exercises to ES6 standards and to corr
 | 5.- | [Linked List](./06-chapter-1-Linked-List.js) | 4 | A `Linked list` is a collection of objects called nodes. Each node is linked to a successor node in the list using an object reference.
 | 6.- | [Double Linked List](./06-chapter-2-Double-Linked-List.js) | 4 | Traversing a `Double linked list` are more efficient, since we no longer have to search for the previous node.
 | 7.- | [Circular Linked List](./06-chapter-3-Circular-Linked-List.js) | 4 | The reason you might want to create a `Circular linked list` is if you want the ability to go backward through a list but don’t want the extra overhead of creating a doubly linked list.
-| 8.- | [Dictionaries](./07-chapter-Dictionaries.js) | 3 | A `Dictionary` is a data structure that stores data as key-value pairs
-
+| 8.- | [Dictionaries](./07-chapter-Dictionaries.js) | 3 | A `Dictionary` is a data structure that stores data as key-value pairs.
+| 9.- | [Hashing](./08-chapter-Hashing.js) | 2 | `Hashing` is a common technique for storing data in such a way that the data can be inserted and retrieved very quickly. Hashing uses a data structure called a hash table. Although hash tables provide fast insertion, deletion, and retrieval, they perform poorly for operations that involve searching.
+| 10.- | [Set](./09-chapter-Set.js) | 4 | A `Set` is a collection of unique elements. The elements of a set are called members. The two most important properties of sets are that the members of a set are unordered and that no member can occur in a set more than once.
 
 
 ### To run the examples we need the following:
 
-- NodeJS Install
-- Open Any Terminal and position to the folder where the files are located
+- NodeJS Installed
+- Open Any Terminal and position it to the folder where the files are located
 - execute the command: `$ node [file-name.js]`
