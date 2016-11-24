@@ -22,7 +22,8 @@ The purpose of this repo is to update the exercises to ES6 standards and to corr
 | 9.- | [Hashing](./08-chapter-Hashing.js) | 2 | `Hashing` is a common technique for storing data in such a way that the data can be inserted and retrieved very quickly. Hashing uses a data structure called a hash table. Although hash tables provide fast insertion, deletion, and retrieval, they perform poorly for operations that involve searching.
 | 10.- | [Set](./09-chapter-Set.js) | 4 | A `Set` is a collection of unique elements. The elements of a set are called members. The two most important properties of sets are that the members of a set are unordered and that no member can occur in a set more than once.
 | 11.- | [Binary Trees and Binary Search Trees](./10-chapter-Binary-Trees.js) | 4 | `Binary trees` are chosen over other more primary data structures because you can search a binary tree very quickly (as opposed to a linked list, for example) and you can quickly insert and delete data from a binary tree (as opposed to an array).
-| 12.- | [Graphs and Graphs Algorithms](./11-chapter-Graphs.js) | | A graph consists of a set of vertices and a set of edges. Think of a map of a US state. Each town is connected with other towns via some type of road. A map is a type of graph where each town is a vertex, and a road that connects two towns is an edge. Edges are defined as a pair (v1, v2), where v1 and v2 are two vertices in a graph
+| 12.- | [Simple Graphs](./11-chapter-1-MatrixAdjencency-Graphs.js) | 2 | A graph consists of a set of vertices and a set of edges. A map is a type of graph where each town is a vertex, and a road that connects two towns is an edge. Edges are defined as a pair (v1, v2), where v1 and v2 are two vertices in a graph
+| 13.- | [Complete Graphs](./11-chapter-2-ArrayListAdjecency-Graphs.js) | 2 | A complete graph is where all vertices are conected with each other.
 
 
 ### To run the examples we need the following:
