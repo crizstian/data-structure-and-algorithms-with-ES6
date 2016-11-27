@@ -24,6 +24,7 @@ The purpose of this repo is to update the exercises to ES6 standards and to corr
 | 11.- | [Binary Trees and Binary Search Trees](./10-chapter-Binary-Trees.js) | 4 | `Binary trees` are chosen over other more primary data structures because you can search a binary tree very quickly (as opposed to a linked list, for example) and you can quickly insert and delete data from a binary tree (as opposed to an array).
 | 12.- | [Simple Graphs](./11-chapter-1-MatrixAdjencency-Graphs.js) | 2 | A graph consists of a set of vertices and a set of edges. A map is a type of graph where each town is a vertex, and a road that connects two towns is an edge. Edges are defined as a pair (v1, v2), where v1 and v2 are two vertices in a graph
 | 13.- | [Complete Graphs](./11-chapter-2-ArrayListAdjecency-Graphs.js) | 2 | A complete graph is where all vertices are conected with each other.
+| 14.- | [Sorting Algorithms](./12-chapter-Sorting-Algorithms.js) | 6 | Two of the most common operations performed on data stored in a computer are sorting and searching. The sorting algorithms are Bubble Sort, Selection Sort, Insertion Sort, Shell Sort and Quick Sort.
 
 
 ### To run the examples we need the following:
