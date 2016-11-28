@@ -1,5 +1,3 @@
-// List data structure class example in ES6
-// ###################################
 class List {
   constructor(dataStore = [], listSize = 0, pos = 0) {
     this.dataStore = dataStore;
@@ -93,7 +91,7 @@ class List {
   }
 }
 
-// Class People for Excercise 1 and 2
+// Class GenericList for Excercise 1 and 2
 // ###################################
 class GenericList extends List {
   constructor(dataStore, listSize) {
@@ -137,67 +135,6 @@ class GenericList extends List {
       console.log(`The element: ${element} is not smaller than elemnt's in the list`);
     }
   }
-}
-
-// Class People for Excercise 3
-// ###################################
-class People {
-  constructor(name = 'generic Doe', gender = 'generic') {
-    this.name   = name;
-    this.gender = gender;
-  }
-}
-
-class PeopleList extends List {
-
-  displayByGender(gender) {
-    console.log(`Displaying only people who has the gender: ${gender}`);
-    this.dataStore.forEach((person, counter) => {
-      if(person.gender === gender){
-        console.log(`${counter + 1}.- ${person.name}`);
-      }
-    });
-  }
-}
-
-// Class People for Excercise 4
-// ###################################
-
-class Customer {
-  constructor(name = 'Juan Colorado', movie = 'Monarcas Morelia Movie') {
-    this.name  = name;
-    this.movie = movie;
-  }
-}
-
-class MovieStore extends List {
-
-  constructor(rentedList = new List()) {
-    super();
-    this.rentedList = rentedList;
-  }
-
-  checkOut(name, movie, customerList) {
-    if(this.contains(movie)) {
-       const c = new Customer(name, movie);
-       customerList.append(c);
-       this.remove(movie);
-       this.rentedList.append(movie);
-       console.log('\nMovies rented: ');
-       this.rentedList.displayList();
-    } else {
-      console.log(`\n${movie} is not available to rent or is already rented`);
-    }
-  }
-
-  checkIn(movie, customer, customerList) {
-    if(this.rentedList.contains(movie)) {
-      this.rentedList.remove(movie);
-      this.append(movie);
-      // customerList.remove(customer.name);
-    }
-  }
-
 }
 
 
@@ -258,7 +195,27 @@ list6.insertSmallerThan(3);
 list6.insertSmallerThan(0);
 console.log(list6.toString());
 
+// Class People for Excercise 3
 // ###################################
+class People {
+  constructor(name = 'generic Doe', gender = 'generic') {
+    this.name   = name;
+    this.gender = gender;
+  }
+}
+
+class PeopleList extends List {
+
+  displayByGender(gender) {
+    console.log(`Displaying only people who has the gender: ${gender}`);
+    this.dataStore.forEach((person, counter) => {
+      if(person.gender === gender){
+        console.log(`${counter + 1}.- ${person.name}`);
+      }
+    });
+  }
+}
+
 /*
 3.- Create a Person class that stores a person’s name and their gender.
     Create a list of at least 10 Person objects. Write a function that displays
@@ -291,7 +248,47 @@ peopleList.insert(p10,p3.name);
 peopleList.displayByGender('male');
 peopleList.displayByGender('female');
 
+
+// Class People for Excercise 4
 // ###################################
+
+class Customer {
+  constructor(name = 'Juan Colorado', movie = 'Monarcas Morelia Movie') {
+    this.name  = name;
+    this.movie = movie;
+  }
+}
+
+class MovieStore extends List {
+
+  constructor(rentedList = new List()) {
+    super();
+    this.rentedList = rentedList;
+  }
+
+  checkOut(name, movie, customerList) {
+    if(this.contains(movie)) {
+       const c = new Customer(name, movie);
+       customerList.append(c);
+       this.remove(movie);
+       this.rentedList.append(movie);
+       console.log('\nMovies rented: ');
+       this.rentedList.displayList();
+    } else {
+      console.log(`\n${movie} is not available to rent or is already rented`);
+    }
+  }
+
+  checkIn(movie, customer, customerList) {
+    if(this.rentedList.contains(movie)) {
+      this.rentedList.remove(movie);
+      this.append(movie);
+      // customerList.remove(customer.name);
+    }
+  }
+
+}
+
 /*
 4.- Modify the video-rental kiosk program so that when a movie is checked out it
     is added to a list of rented movies. Display this list whenever a customer
