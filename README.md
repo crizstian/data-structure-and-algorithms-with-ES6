@@ -25,6 +25,7 @@ The purpose of this repo is to update the exercises to ES6 standards and to corr
 | 12.- | [Simple Graphs](./11-chapter-1-MatrixAdjencency-Graphs.js) | 2 | A graph consists of a set of vertices and a set of edges. A map is a type of graph where each town is a vertex, and a road that connects two towns is an edge. Edges are defined as a pair (v1, v2), where v1 and v2 are two vertices in a graph
 | 13.- | [Complete Graphs](./11-chapter-2-ArrayListAdjecency-Graphs.js) | 2 | A complete graph is where all vertices are conected with each other.
 | 14.- | [Sorting Algorithms](./12-chapter-Sorting-Algorithms.js) | 6 | Two of the most common operations performed on data stored in a computer are sorting and searching. The sorting algorithms are Bubble Sort, Selection Sort, Insertion Sort, Shell Sort and Quick Sort.
+| 15.- | [Searching Algorithms](./13-chapter-Searching-Algorithms.js) | 6 | There are two ways to search for data in a list: sequential search and binary search. A sequential search is used when the items in a list are in random order; a binary search is used when the items in a list are in sorted order.
 
 
 ### To run the examples we need the following:
