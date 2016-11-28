@@ -15,7 +15,22 @@ class grades {
   }
 }
 
-// ##############################################
+// Implementation of the grade class
+console.log('### Excercise 1');
+const gradeObj = [90,89,75];
+const grade    = new grades(gradeObj);
+grade.addGrade(90);
+grade.addGrade(25);
+console.log(`Avg grade: ${grade.displayAvg()}`);
+
+// #############################################
+console.log('\n### Excercise 2');
+const arrayWords = ["hello ","my ","friend "];
+console.log(`orginal array: ${arrayWords} `);
+console.log(`displaying forward: ${arrayWords.reduce((total, word) => total + word)}`);
+console.log(`displaying backward: ${arrayWords.reduceRight((total, word) => total + word)}`);
+
+// #############################################
 class weekTemps {
 
   constructor(dataStore = []) {
@@ -57,26 +72,7 @@ class weekTemps {
   }
 }
 
-// Excercises
-// #############################################
-console.log('CHAPTER 2');
-console.log('### Excercise 1');
-
-const gradeObj = [90,89,75];
-const grade    = new grades(gradeObj);
-grade.addGrade(90);
-grade.addGrade(25);
-console.log(`Avg grade: ${grade.displayAvg()}`);
-
-// #############################################
-console.log('\n### Excercise 2');
-
-const arrayWords = ["hello ","my ","friend "];
-console.log(`orginal array: ${arrayWords} `);
-console.log(`displaying forward: ${arrayWords.reduce((total, word) => total + word)}`);
-console.log(`displaying backward: ${arrayWords.reduceRight((total, word) => total + word)}`);
-
-// #############################################
+// Implementation of weekTemps class
 console.log('\n### Excercise 3');
 
 const randomMonth = [
