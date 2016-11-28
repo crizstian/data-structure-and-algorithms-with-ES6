@@ -61,7 +61,7 @@ class GenericArray {
 
   // fastest sort algorithm for small data sets
    insertionSort() {
-     var temp, inner;
+     let temp, inner;
      for (let outer = 1; outer <= this.dataStore.length-1; outer++) {
        temp = this.dataStore[outer];
        inner = outer;
