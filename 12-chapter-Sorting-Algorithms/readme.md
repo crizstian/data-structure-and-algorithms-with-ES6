@@ -38,8 +38,9 @@ MergeSort is a Divide and Conquer algorithm. It divides input array in two halve
 #### Properties of a sorting algorithm
 
 In addition to the time and space complexity of sorting algorithms, the below properties help define sorting algorithms.
-|Property |	Description
-| --- | ---
+
+|Property |	Description |
+| --- | --- |
 |Adaptability |	An adaptive sort’s performance improves the more sorted the list is initially.
 |In-place |	An in-place sort requires a constant amount of additional space.
 |Parallelism |	A parallel sort can split its workload between multiple workers.
