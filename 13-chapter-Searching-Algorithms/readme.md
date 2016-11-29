@@ -50,6 +50,10 @@ Searching for a specific value in a BST requires that a comparison be made betwe
 
 DFS and BFS are tree/graph traversing and searching data structures.
 
+Determining which vertices can be reached from a specified vertex is a common activity performed on graphs. We might want to know which roads lead from one town to other towns on the map, or which flights can take us from one airport to other airports.
+
+These operations are performed on a graph using a search algorithm. There are two fundamental searches we can perform on a graph: the depth-first search and the breadth- first search.
+
 ![](https://i2.wp.com/codingsec.net/wp-content/uploads/2016/03/dfs-bfs-codingsec.gif)
 
 Applications:
@@ -60,10 +64,10 @@ Applications:
 
 ### Code Examples
 
-[JavaScript built-in findIndex(), find()](../03-chapter-List.js)
-[Sequential/Binary Search example](./13-chapter-Searching-Algorithms.js)
-[Binary Search Tree Searches](../10-chapter-Binary-Trees.js)
-[Depth/Breadth First Search](../11-chapter-2-adjecency-list-Graphs.js)
+- [JavaScript built-in findIndex(), find()](../03-chapter-List.js)
+- [Sequential/Binary Search example](./13-chapter-Searching-Algorithms.js)
+- [Binary Search Tree Searches](../10-chapter-Binary-Trees.js)
+- [Depth/Breadth First Search](../11-chapter-2-adjecency-list-Graphs.js)
 
 #### Resources
 
