@@ -1,3 +1,5 @@
+const BasicSorting = require('../12-chapter-Sorting-Algorithms/12-chapter-basic-sorting-algorithms');
+
 class Search {
 
   static sequentialSearch(dataStore, data) {
@@ -78,19 +80,6 @@ function setData(numElements = 100) {
   return dataStore;
 }
 
-function insertionSort(dataStore) {
-  let temp, inner;
-  for (let outer = 1; outer <= dataStore.length-1; outer++) {
-    temp = dataStore[outer];
-    inner = outer;
-    while (inner > 0 && (dataStore[inner-1] >= temp)) {
-       dataStore[inner] = dataStore[inner-1];
-       --inner;
-    }
-    dataStore[inner] = temp;
-  }
-}
-
 // Implementation
 // ##########################################################################
 const fs = require('fs');
@@ -105,7 +94,7 @@ function readMyData(file) {
   console.log(`Sequential search took ${end - start} milliseconds.`);
   console.log();
 
-  insertionSort(data);
+  BasicSorting.insertionSort(data);
   start    = new Date().getTime();
   position = Search.binarySearch(data, word);
   end      = new Date().getTime();
@@ -121,7 +110,7 @@ console.log();
 console.log(`The minimum value is: ${Search.minValue(dataStore)}`);
 console.log(`The maximum value is: ${Search.maxValue(dataStore)}`);
 console.log();
-insertionSort(dataStore);
+BasicSorting.insertionSort(dataStore);
 const resBin  = Search.binarySearch(dataStore, number);
 const count   = Search.countOccurrences(dataStore, number);
 const present = `${number} is present in the set and is in the position ${resBin} and has ${count} occurrences`;
