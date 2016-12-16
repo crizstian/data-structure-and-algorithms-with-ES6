@@ -1,4 +1,14 @@
-# Sort Algorithms
+# Sort Algorithms with ES6 
+
+### Code Examples
+[Basic Sorting Algorithms](./basic-sort.js)
+[Advanced Sorting Algorithms - Quick Sort](./quick-sort.js)
+[Advanced Sorting Algorithms - Merge Sort](./merge-sort.js)
+[Module](./sort-module.js)
+[Implentation](./implementation.js)
+[Import Module](./index.js)
+
+### Description
 
 Sorting is the most heavily studied concept in Computer Science. A sorting algorithm takes a list of items and sorts them in a particular order, most commonly alphabetically or numerical. Though every major programming language has built-in sorting libraries, it comes in handy if you know how they work. Depending upon requirement you may want to use any of these.
 
@@ -49,38 +59,6 @@ In addition to the time and space complexity of sorting algorithms, the below pr
 More importantly one should know when and where to use them. Some examples where you can find direct application of sorting techniques include:
 
 Sorting by price, popularity etc in e-commerce websites
-
-#### Results
-
-**Bubble Sort**
-
-Elapsed time for the Bubble Sort on 10000 elements is: 890 milliseconds.
-
-**Selection Sort**
-
-Elapsed time for the Selection Sort on 10000 elements is: 186 milliseconds.
-
-**Insertion Sort**
-
-Elapsed time for the Insertion Sort on 10000 elements is: 27 milliseconds.
-
-**Quick Sort**
-
-Elapsed time for the Quick Sort on 10000 elements is: 4 milliseconds.
-
-**Merge Sort**
-
-Elapsed time for the Merge Sort on 10000 elements is: 15 milliseconds.
-
-**Default JS Sort**
-
-Elapsed time for the Default JS Sort on 10000 elements is: 13 milliseconds.
-
-
-### Code Examples
-[Basic Sorting Algorithms](./12-chapter-basic-sorting-algorithms.js)
-[Advanced Sorting Algorithms](./12-chapter-advance-sorting-algorithms.js)
-[Implentation](./implementation.js)
 
 #### Resources
 

@@ -1,51 +1,51 @@
-const BasicSorting   = require('./12-chapter-basic-sorting-algorithms');
-const AdvanceSoritng = require('./12-chapter-advance-sorting-algorithms');
+const {sort} = require('./sort-module')
 
-function setData(numElements = 100) {
-  let dataStore = [];
+const nsTime = (hrtime) => hrtime[0] * 1e9 + hrtime[1]
+
+function setData (numElements = 100) {
+  let dataStore = []
   for (let i = 0; i < numElements; i++) {
-    dataStore[i] = Math.floor(Math.random() * (numElements + 1));
+    dataStore[i] = Math.floor(Math.random() * (numElements + 1))
   }
-  return dataStore;
+  return dataStore
 }
 
-function evaluteSortingAlgorithms(dataStore, typeSort) {
-  console.log(typeSort);
-  let start = new Date().getTime();
+function evaluteSortingAlgorithms (dataStore, typeSort) {
+  let start = process.hrtime()
 
   switch (typeSort) {
     case 'Bubble Sort':
-      BasicSorting.bubbleSort(dataStore);
-    break;
+      sort(dataStore).bubbleSort()
+      break
     case 'Selection Sort':
-      BasicSorting.selectionSort(dataStore);
-    break;
+      sort(dataStore).selectionSort()
+      break
     case 'Insertion Sort':
-      BasicSorting.insertionSort(dataStore);
-    break;
+      sort(dataStore).insertionSort()
+      break
     case 'Merge Sort':
-      AdvanceSoritng.mergeSort(dataStore);
-    break;
+      sort(dataStore).mergeSort()
+      break
     case 'Quick Sort':
-      AdvanceSoritng.quickSort(dataStore);
-    break;
+      sort(dataStore).quickSort()
+      break
     default:
-      dataStore.sort();
+      dataStore.sort()
   }
 
-  let end = new Date().getTime();
-  console.log(`Elapsed time for the ${typeSort} on ${numElements} elements is: ${end} - ${start} = ${end - start} milliseconds.`);
-  console.log('###################');
+  let end = process.hrtime(start)
+  console.log(`Elapsed time for the ${typeSort} on ${numElements} elements is: ${nsTime(end) / 1e9} nanoseconds.`)
+  console.log('\n')
 }
 
-const numElements = 10000;
-const sortTypes   = [
+const numElements = 40
+const sortTypes = [
   'Bubble Sort',
   'Selection Sort',
   'Insertion Sort',
   'Quick Sort',
   'Merge Sort',
   'Default JS Sort'
-];
+]
 
-sortTypes.forEach(type => evaluteSortingAlgorithms(setData(numElements), type));
+sortTypes.forEach(type => evaluteSortingAlgorithms(setData(numElements), type))
