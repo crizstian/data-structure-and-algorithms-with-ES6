@@ -4,11 +4,7 @@ const fs = require('fs')
 
 const nsTime = (hrtime) => hrtime[0] * 1e9 + hrtime[1]
 
-let data = fs.readFileSync('./13-chapter-Searching-Algorithms/paragraph.txt', 'utf8')
-  .trim()
-  .split(' ')
-
-function setData (numElements = 100) {
+const setData = (numElements = 100) => {
   let dataStore = []
   for (let i = 0; i < numElements; i++) {
     dataStore[i] = Math.floor(Math.random() * (numElements + 1))
@@ -30,10 +26,15 @@ test ('Binary and Sequential search on array of numbers', assert => {
 })
 
 test ('Binary and Sequential search on text file', assert => {
+  let data = fs.readFileSync('./13-chapter-Searching-Algorithms/paragraph.txt', 'utf8')
+    .trim()
+    .split(' ')
+
   const word = 'rhetoric'
   let start = process.hrtime()
   let position = search.sequentialSearch(data, word)
   let end = process.hrtime(start)
+
   assert.ok(position, `${word} is present in the set and is in the position ${position}`)
   assert.ok(position, `Sequential search took ${nsTime(end) / 1e9} milliseconds.`)
 
@@ -41,6 +42,7 @@ test ('Binary and Sequential search on text file', assert => {
   start = process.hrtime()
   position = search.binarySearch(data, word)
   end = process.hrtime(start)
+
   assert.ok((position >= 0), `${word} is present in the set and is in the position ${position}`)
   assert.ok(position, `Binary search took ${nsTime(end) / 1e9} milliseconds.`)
 })

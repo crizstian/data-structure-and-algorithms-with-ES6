@@ -31,9 +31,9 @@
   }
 
   const quickObject = {
-    sort (args) {
-      swap = [].slice.call(arguments, 1)[0]
-      alist = args
+    sort (...args) {
+      alist = args[0]
+      swap = args[1]
       quickSortHelper(0, alist.length - 1)
       return alist
     }

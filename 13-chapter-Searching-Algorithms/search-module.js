@@ -1,5 +1,5 @@
 (function (exports) {
-  function sequentialSearch (dataStore, data) {
+  const sequentialSearch = (dataStore, data) => {
     for (var i = 0; i < dataStore.length; i++) {
       if (dataStore[i] === data) {
         return i
@@ -8,7 +8,7 @@
     return -1
   }
 
-  function binarySearch (dataStore, data) {
+  const binarySearch = (dataStore, data) => {
     let upperBound = dataStore.length - 1
     let lowerBound = 0
     while (lowerBound <= upperBound) {
@@ -24,7 +24,7 @@
     return -1
   }
 
-  function countOccurrences (dataStore, data) {
+  const countOccurrences = (dataStore, data) => {
     let count = 0
     let position = binarySearch(dataStore, data)
     if (position > -1) {
@@ -47,7 +47,7 @@
     return count
   }
 
-  function minValue (dataStore) {
+  const minValue = (dataStore) => {
     let min = dataStore[0]
     for (var i = 1; i < dataStore.length; i++) {
       if (dataStore[i] < min) {
@@ -57,7 +57,7 @@
     return min
   }
 
-  function maxValue (dataStore) {
+  const maxValue = (dataStore) => {
     let max = dataStore[0]
     for (var i = 1; i < dataStore.length; i++) {
       if (dataStore[i] > max) {
@@ -67,5 +67,5 @@
     return max
   }
 
-  Object.assign(exports, {sequentialSearch}, {binarySearch}, {minValue}, {maxValue}, {countOccurrences})
+  Object.assign(exports, {sequentialSearch, binarySearch, minValue, maxValue, countOccurrences})
 }((typeof module.exports !== undefined) ? module.exports : window))
