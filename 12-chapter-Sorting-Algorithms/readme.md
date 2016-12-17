@@ -1,12 +1,12 @@
-# Sort Algorithms with ES6 
+# Sort Algorithms with ES6
 
 ### Code Examples
-[Basic Sorting Algorithms](./basic-sort.js)
-[Advanced Sorting Algorithms - Quick Sort](./quick-sort.js)
-[Advanced Sorting Algorithms - Merge Sort](./merge-sort.js)
-[Module](./sort-module.js)
-[Implentation](./implementation.js)
-[Import Module](./index.js)
+- [Basic Sorting Algorithms](./basic-sort.js)
+- [Advanced Sorting Algorithms - Quick Sort](./quick-sort.js)
+- [Advanced Sorting Algorithms - Merge Sort](./merge-sort.js)
+- [Module](./sort-module.js)
+- [Implentation](./implementation.js)
+- [Import Module](./index.js)
 
 ### Description
 

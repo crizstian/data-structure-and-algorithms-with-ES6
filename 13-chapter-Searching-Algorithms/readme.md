@@ -1,4 +1,13 @@
-# Search Algorithms
+# Search Algorithms with ES6
+
+### Code Examples
+
+- [Sequential/Binary Search example](./search-module.js)
+- [JavaScript built-in findIndex(), find()](../03-chapter-List.js)
+- [Binary Search Tree Searches](../10-chapter-Binary-Trees.js)
+- [Depth/Breadth First Search](../11-chapter-2-adjecency-list-Graphs.js)
+
+### Description
 
 There are two ways to search for data in a list: sequential search and binary search. A sequential search is used when the items in a list are in random order; a binary search is used when the items in a list are in sorted order. Binary search is the more efficient algorithm, but you also have to take into account the extra time it takes to sort the data set before being able to search it for a value.
 
@@ -62,12 +71,6 @@ Applications:
 - Used in artificial intelligence to build bots, for instance a chess bot
 - Finding shortest path between two cities in a map and many other such applications
 
-### Code Examples
-
-- [JavaScript built-in findIndex(), find()](../03-chapter-List.js)
-- [Sequential/Binary Search example](./13-chapter-Searching-Algorithms.js)
-- [Binary Search Tree Searches](../10-chapter-Binary-Trees.js)
-- [Depth/Breadth First Search](../11-chapter-2-adjecency-list-Graphs.js)
 
 #### Resources
 

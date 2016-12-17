@@ -1,4 +1,4 @@
 (function (exports) {
-  const sort = require('./sort-module')
-  Object.assign(exports, sort)
+  const search = require('./search-module')
+  Object.assign(exports, {search})
 }((typeof module.exports !== undefined) ? module.exports : window))

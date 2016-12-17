@@ -1,0 +1,31 @@
+{
+  "name": "data-structures-with-es6",
+  "version": "1.0.0",
+  "description": "Data Structures and Algorithims with ES6",
+  "main": "index.js",
+  "scripts": {
+    "test": "qunit -t test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crizstian/data-structure-and-algorithms-with-ES6.git"
+  },
+  "keywords": [
+    "Data",
+    "Structures",
+    "ES6",
+    "Algorithms",
+    "Prototypal",
+    "Object",
+    "Inheritance"
+  ],
+  "author": "Cristian Ramirez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Crizstian/data-structure-and-algorithms-with-ES6/issues"
+  },
+  "homepage": "https://github.com/Crizstian/data-structure-and-algorithms-with-ES6#readme",
+  "devDependencies": {
+    "qunit": "^0.9.1"
+  }
+}
