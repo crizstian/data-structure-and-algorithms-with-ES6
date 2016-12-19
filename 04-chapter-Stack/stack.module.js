@@ -1,26 +1,21 @@
 (function (exports) {
-  let dataStore
-  let top
+  const stack = (data = [], t = 0) => {
+    let dataStore = data
+    let top = t
 
-  const stackFactory = (data = [], t = -1) => {
-    let stackProto = {}
-    dataStore = data
-    top = t
-
-    stackProto.push = (element) => {
-      dataStore[top++] = element
+    const stackProto = {
+      push (element) {
+        dataStore[top++] = element
+      },
+      pop: () => dataStore.splice(--top, 1),
+      peek: () => dataStore[top - 1],
+      length: () => top,
+      isEmpty: () => top === 0,
+      getStack: () => dataStore
     }
 
-    stackProto.pop = () => {
-      dataStore.splice(--top, 1)
-    }
-
-    stackProto.peek = () => dataStore[top - 1]
-
-    stackProto.length = () => top
-
-    stackProto.isEmpty = () => top === -1
+    return Object.create(stackProto)
   }
 
-  Object.assign(exports, {stack: stackFactory})
+  Object.assign(exports, {stack})
 }((typeof module.exports !== undefined) ? module.exports : window))
