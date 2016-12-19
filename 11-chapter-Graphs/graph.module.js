@@ -1,4 +1,6 @@
 (function (exports) {
+  const {graphSearch} = require('./graph.search')
+
   const graphFactory = () => {
     let graph = {}
     let graphProto = {}
@@ -59,11 +61,7 @@
 
     graphProto.showVertex = (node) => console.log(graphProto.getVertex(node))
 
-    graphProto.showVertexs = () => {
-      const vertexs = Object.keys(graph)
-      console.log('Vertexs of the graph')
-      vertexs.forEach(node => console.log(node))
-    }
+    graphProto.showVertexs = () => console.log(Object.keys(graph))
 
     graphProto.getGraph = () => graph
 
@@ -71,7 +69,7 @@
 
     graphProto.getNumVertices = () => vertices
 
-    return graphProto
+    return Object.assign(graphProto, {search: graphSearch.bind(graphProto)})
   }
 
   Object.assign(exports, {graph: graphFactory})

@@ -2,39 +2,62 @@ const {graph} = require('./graph.module')
 
 test('Graph Data Structure', assert => {
   const devBook = Object.create(graph())
+  const devBook2 = Object.create(graph())
 
-  devBook.addVertex('James Gosling')
-  devBook.addVertex('Guido Rossum')
-  devBook.addVertex('Linus Torvalds')
-  devBook.addVertex('Cristian Ramirez')
+  devBook.addVertex('S')
+  devBook.addVertex('A')
+  devBook.addVertex('B')
+  devBook.addVertex('C')
+  devBook.addVertex('D')
+  devBook.addVertex('E')
 
-  assert.equal(!!devBook.getVertex('Linus Torvalds'), true, 'adds vertex')
+  assert.equal(!!devBook.getVertex('A'), true, 'adds vertex')
 
-  devBook.addEdge('James Gosling', 'Guido Rossum')
-  devBook.addEdge('James Gosling', 'Cristian Ramirez')
-  devBook.addEdge('Linus Torvalds', 'Cristian Ramirez')
+  devBook.addEdge('S', 'A')
+  devBook.addEdge('S', 'B')
+  devBook.addEdge('S', 'C')
+  devBook.addEdge('A', 'D')
+  devBook.addEdge('B', 'D')
+  devBook.addEdge('C', 'D')
+  devBook.addEdge('A', 'E')
 
-  assert.equal(devBook.getVertex('Linus Torvalds').edges['Cristian Ramirez'], true, 'adds edges')
+  const vertex = devBook.getVertex('A')
 
-  devBook.removeEdge('Linus Torvalds', 'Cristian Ramirez')
+  assert.equal(vertex, devBook.getVertex('A'), 'get vertex object')
 
-  assert.equal(!!devBook.getVertex('Linus Torvalds').edges['Cristian Ramirez'], false, 'removes an edge')
+  assert.equal(devBook.getVertex('C').edges['D'], true, 'adds edges')
 
-  devBook.removeVertex('Linus Torvalds')
+  devBook.removeEdge('A', 'E')
 
-  assert.equal(devBook.getVertex('Linus Torvalds'), false, 'removes a vertex')
+  assert.equal(!!devBook.getVertex('A').edges['E'], false, 'removes an edge')
 
-  assert.ok(devBook.hasEdge('James Gosling', 'Guido Rossum'), 'verify has edge')
+  devBook.removeVertex('E')
+
+  assert.equal(devBook.getVertex('E'), false, 'removes a vertex')
+
+  assert.ok(devBook.hasEdge('B', 'D'), 'verify has edge')
 
   devBook.showGraph()
 
-  console.log(JSON.stringify(devBook.getGraph(), null, 2))
-
   devBook.showVertexs()
 
-  // devBook.showVertex('James Gosling')
+  console.log('DFS() search...')
 
-  const vertex = devBook.getVertex('Cristian Ramirez')
+  devBook.search(devBook.getGraph()).dfs()
 
-  assert.equal(vertex, devBook.getVertex('Cristian Ramirez'), 'get vertex object')
+  devBook2.addVertex('S')
+  devBook2.addVertex('A')
+  devBook2.addVertex('B')
+  devBook2.addVertex('C')
+  devBook2.addVertex('D')
+  devBook2.addEdge('S', 'A')
+  devBook2.addEdge('S', 'B')
+  devBook2.addEdge('S', 'C')
+  devBook2.addEdge('A', 'D')
+  devBook2.addEdge('B', 'D')
+  devBook2.addEdge('C', 'D')
+
+  console.log('BFS() search...')
+
+  devBook2.search(devBook2.getGraph()).bfs()
 })
