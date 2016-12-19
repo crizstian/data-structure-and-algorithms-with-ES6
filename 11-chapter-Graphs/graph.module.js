@@ -3,73 +3,65 @@
 
   const graphFactory = () => {
     let graph = {}
-    let graphProto = {}
     let vertices = 0
 
-    graphProto.contains = (node) => !!graph[node]
-
-    graphProto.hasEdge = (nodeOne, nodeTwo) => {
-      if (graphProto.contains(nodeOne) && graphProto.contains(nodeTwo)) {
-        return !!graph[nodeOne].edges[nodeTwo]
-      }
-    }
-
-    graphProto.addVertex = (node) => {
-      if (!graphProto.contains(node)) {
-        graph[node] = {edges: {}, visited: false}
-        vertices += 1
-      }
-    }
-
-    graphProto.removeVertex = (node) => {
-      if (graphProto.contains(node)) {
-        for (let item in graph[node].edges) {
-          if (graph[node].edges.hasOwnProperty(item)) {
-            graph.removeEdge(node, item)
+    const graphProto = {
+      contains: (node) => !!graph[node],
+      hasEdge: (nodeOne, nodeTwo) => {
+        if (graphProto.contains(nodeOne) && graphProto.contains(nodeTwo)) {
+          return !!graph[nodeOne].edges[nodeTwo]
+        }
+      },
+      addVertex: (node) => {
+        if (!graphProto.contains(node)) {
+          graph[node] = {edges: {}, visited: false}
+          vertices += 1
+        }
+      },
+      removeVertex: (node) => {
+        if (graphProto.contains(node)) {
+          for (let item in graph[node].edges) {
+            if (graph[node].edges.hasOwnProperty(item)) {
+              graph.removeEdge(node, item)
+            }
           }
+          vertices -= 1
+          delete graph[node]
         }
-        vertices -= 1
-        delete graph[node]
-      }
-    }
-
-    graphProto.addEdge = (nodeOne, nodeTwo) => {
-      if (graphProto.contains(nodeOne) && graphProto.contains(nodeTwo)) {
-        graph[nodeOne].edges[nodeTwo] = true
-        graph[nodeTwo].edges[nodeOne] = true
-      }
-    }
-
-    graphProto.removeEdge = (nodeOne, nodeTwo) => {
-      if (graphProto.contains(nodeOne) && graphProto.contains(nodeTwo)) {
-        delete graph[nodeOne].edges[nodeTwo]
-        delete graph[nodeTwo].edges[nodeOne]
-      }
-    }
-
-    graphProto.showGraph = () => {
-      let show = ''
-      for (let v in graph) {
-        show += `${v} -> `
-        for (let n in graph[v].edges) {
-          show += n + ', '
+      },
+      addEdge: (nodeOne, nodeTwo) => {
+        if (graphProto.contains(nodeOne) && graphProto.contains(nodeTwo)) {
+          graph[nodeOne].edges[nodeTwo] = true
+          graph[nodeTwo].edges[nodeOne] = true
         }
-        show += '\n'
-      }
-      console.log(show)
+      },
+      removeEdge: (nodeOne, nodeTwo) => {
+        if (graphProto.contains(nodeOne) && graphProto.contains(nodeTwo)) {
+          delete graph[nodeOne].edges[nodeTwo]
+          delete graph[nodeTwo].edges[nodeOne]
+        }
+      },
+      showGraph: () => {
+        let show = ''
+        for (let v in graph) {
+          show += `${v} -> `
+          for (let n in graph[v].edges) {
+            show += n + ', '
+          }
+          show += '\n'
+        }
+        console.log(show)
+      },
+      showVertex: (node) => console.log(graphProto.getVertex(node)),
+      showVertexs: () => console.log(Object.keys(graph)),
+      getGraph: () => graph,
+      getVertex: (node) => (graphProto.contains(node)) ? graph[node] : false,
+      getNumVertices: () => vertices
     }
 
-    graphProto.showVertex = (node) => console.log(graphProto.getVertex(node))
+    Object.assign(graphProto, {bfs: bfs.bind(graphProto), dfs: dfs.bind(graphProto)})
 
-    graphProto.showVertexs = () => console.log(Object.keys(graph))
-
-    graphProto.getGraph = () => graph
-
-    graphProto.getVertex = (node) => (graphProto.contains(node)) ? graph[node] : false
-
-    graphProto.getNumVertices = () => vertices
-
-    return Object.assign(graphProto, {bfs: bfs.bind(graphProto), dfs: dfs.bind(graphProto)})
+    return Object.create(graphProto)
   }
 
   Object.assign(exports, {graph: graphFactory})

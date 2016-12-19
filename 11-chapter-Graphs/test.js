@@ -1,7 +1,8 @@
 const {graph} = require('./graph.module')
 
 test('Graph Data Structure', assert => {
-  const devBook = Object.create(graph())
+  const devBook = graph()
+  const devBook2 = graph()
 
   devBook.addVertex('S')
   devBook.addVertex('A')
@@ -47,4 +48,28 @@ test('Graph Data Structure', assert => {
   console.log('BFS() search...')
 
   devBook.bfs()
+
+  devBook2.addVertex('F')
+  devBook2.addVertex('G')
+  devBook2.addVertex('H')
+  devBook2.addVertex('I')
+  devBook2.addVertex('J')
+  devBook2.addEdge('F', 'G')
+  devBook2.addEdge('F', 'H')
+  devBook2.addEdge('F', 'I')
+  devBook2.addEdge('G', 'J')
+  devBook2.addEdge('H', 'J')
+  devBook2.addEdge('I', 'J')
+
+  devBook2.showGraph()
+
+  devBook2.showVertexs()
+
+  console.log('DFS() search...')
+
+  devBook2.dfs()
+
+  console.log('BFS() search...')
+
+  devBook2.bfs()
 })
