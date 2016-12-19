@@ -1,5 +1,5 @@
 (function (exports) {
-  const {graphSearch} = require('./graph.search')
+  const {bfs, dfs} = require('./graph.search')
 
   const graphFactory = () => {
     let graph = {}
@@ -69,7 +69,7 @@
 
     graphProto.getNumVertices = () => vertices
 
-    return Object.assign(graphProto, {search: graphSearch.bind(graphProto)})
+    return Object.assign(graphProto, {bfs: bfs.bind(graphProto), dfs: dfs.bind(graphProto)})
   }
 
   Object.assign(exports, {graph: graphFactory})

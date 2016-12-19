@@ -3,7 +3,6 @@
   const {queue} = require('../05-chapter-Queue/')
   let graph
   let keys
-  let graphProto
 
   const displayVertex = (node) => console.log(node)
 
@@ -16,9 +15,17 @@
     return false
   }
 
-  const dfs = () => {
+  const resetSearch = () => {
+    for (let node in graph) {
+      graph[node].visited = false
+    }
+  }
+
+  function dfs () {
+    graph = this.getGraph()
+    keys = Object.keys(graph)
     let graphStack = stack()
-    graphProto.getVertex(keys[0]).visited = true
+    graph[keys[0]].visited = true
     displayVertex(keys[0])
     graphStack.push(keys[0])
 
@@ -33,12 +40,16 @@
         graphStack.push(unvistedVertex)
       }
     }
+
+    resetSearch()
   }
 
-  const bfs = () => {
+  function bfs () {
+    graph = this.getGraph()
+    keys = Object.keys(graph)
     let unvistedVertex
     let graphQueue = queue()
-    graphProto.getVertex(keys[0]).visited = true
+    graph[keys[0]].visited = true
     displayVertex(keys[0])
     graphQueue.enqueue(keys[0])
 
@@ -47,21 +58,15 @@
       unvistedVertex = getUnvistedVertex(tempVertex)
 
       while (unvistedVertex !== false) {
-        graphProto.getVertex(unvistedVertex).visited = true
+        graph[unvistedVertex].visited = true
         displayVertex(unvistedVertex)
         graphQueue.enqueue(unvistedVertex)
         unvistedVertex = getUnvistedVertex(tempVertex)
       }
     }
+
+    resetSearch()
   }
 
-  function searchFactory (g) {
-    graphProto = this
-    graph = g
-    keys = Object.keys(graph)
-
-    return Object.assign({}, {dfs, bfs})
-  }
-
-  Object.assign(exports, {graphSearch: searchFactory})
+  Object.assign(exports, {dfs, bfs})
 }((typeof module.exports !== undefined) ? module.exports : window))
