@@ -1,5 +1,12 @@
 # Graph Data Structure
 
+### Code Examples
+- [Graph Data Structure](./graph.module.js)
+- [Graph Search Algorithms](./graph.search.js)
+- [Import Module](./index.js)
+
+### Description
+
 There are two main parts of a graph:
 
 - The **vertices** (nodes) where the data is stored i.e. the numbers in the image
@@ -28,6 +35,15 @@ common operations you can perform on graphs:
 
 - `contains`: checks if your graph contains a given value
 - `hasEdge`: checks if a connection exists between two given nodes in your graph
+- `dfs`: Depth First Search (DFS) algorithm traverses a graph in a depthward motion and uses a stack to remember to get the next vertex to start a search, when a dead end occurs in any iteration.
+
+![](https://blog.penjee.com/wp-content/uploads/2015/11/binary-search-tree-sorted-array-animation.gif)
+
+
+- `bfs`: Breadth First Search (BFS) algorithm traverses a graph in a breadthward motion and uses a queue to remember to get the next vertex to start a search, when a dead end occurs in any iteration.
+
+![](https://i2.wp.com/codingsec.net/wp-content/uploads/2016/03/dfs-bfs-codingsec.gif)
+
 
 **Display**
 
@@ -61,3 +77,4 @@ Another example of a real word system that can be modeled by a graph is a consum
 ### References
 
 - [A Gentle Introduction to Data Structures: How Graphs Work](https://medium.freecodecamp.com/a-gentle-introduction-to-data-structures-how-graphs-work-a223d9ef8837#.ojpoqfcxa)
+- [Data Structure - Graph Data Structure](https://www.tutorialspoint.com/data_structures_algorithms/graph_data_structure.htm)
