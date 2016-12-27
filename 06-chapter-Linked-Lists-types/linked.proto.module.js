@@ -19,7 +19,7 @@
   const linked = (type) => {
 
     const link = {}
-    // private variables
+    // common private variables linked lists data structures
     let head = null
     let current = null
     let length = 0
@@ -82,18 +82,9 @@
       return false
     }
 
+    // functions for linked list
     const add = (data) => {
       let args = (!head && !current) ? [setHead] : [setNext(current)]
-      compose(...args, setCurrent, setLength)(node(data))
-    }
-
-    const add2 = (data) => {
-      let args = (!head && !current) ? [setHead] : [setNext(current), setPrev(current)]
-      compose(...args, setCurrent, setLength)(node(data))
-    }
-
-    const add3 = (data) => {
-      let args = (!head && !current) ? [setHead2] : [setNext2(current), setPrev2(current)]
       compose(...args, setCurrent, setLength)(node(data))
     }
 
@@ -103,33 +94,6 @@
         compose(setCurrent, setNext(prev))(prev.next.next)
       }
       setLength(false)
-    }
-
-    const remove2 = (data) => {
-      let prev = findPrev(data)
-      if (!(prev.next === null)) {
-        compose(setPrev(prev),setNext(prev), setCurrent)(prev.next.next)
-      }
-      setLength(false)
-    }
-
-    const remove3 = (data) => {
-      let prev = findPrev(data)
-      if (!(prev.next === null)) {
-        compose(setPrev2(prev),setNext2(prev), setCurrent)(prev.next.next)
-      }
-      setLength(false)
-    }
-
-    link.contains = (data) => {
-      let c = head
-      while (!(c === null)) {
-        if (c.data === data) {
-          return true
-        }
-        c = c.next
-      }
-      return false
     }
 
     const display = () => {
@@ -142,6 +106,34 @@
       return show
     }
 
+    // functions for double linked list
+    const add2 = (data) => {
+      let args = (!head && !current) ? [setHead] : [setNext(current), setPrev(current)]
+      compose(...args, setCurrent, setLength)(node(data))
+    }
+
+    const remove2 = (data) => {
+      let prev = findPrev(data)
+      if (!(prev.next === null)) {
+        compose(setPrev(prev),setNext(prev), setCurrent)(prev.next.next)
+      }
+      setLength(false)
+    }
+
+    // functions for cirle linked list
+    const add3 = (data) => {
+      let args = (!head && !current) ? [setHead2] : [setNext2(current), setPrev2(current)]
+      compose(...args, setCurrent, setLength)(node(data))
+    }
+
+    const remove3 = (data) => {
+      let prev = findPrev(data)
+      if (!(prev.next === null)) {
+        compose(setPrev2(prev),setNext2(prev), setCurrent)(prev.next.next)
+      }
+      setLength(false)
+    }
+
     const display2 = () => {
       let c = head
       let show = `${c.data} -> `
@@ -152,6 +144,17 @@
       return show
     }
 
+    // Common functions for linked list's
+    link.contains = (data) => {
+      let c = head
+      while (!(c === null)) {
+        if (c.data === data) {
+          return true
+        }
+        c = c.next
+      }
+      return false
+    }
     link.getCurrent = () => current
     link.getList = () => head
     link.size = () => length

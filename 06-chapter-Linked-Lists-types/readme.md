@@ -2,9 +2,7 @@
 
 ### Code Examples
 
-- [Linked List Data Structure]('./linked-list.module')
-- [Double Linked List Data Structure]('./double-linked-list.module')
-- [Circular Linked List Data Structure]('./circular-linked-list.module')
+- [Single, Double, Circular, Linked List, Data Structure]('./linked.proto.module')
 - [Import complete module]('./index')
 
 ### Definition Linked List
@@ -15,11 +13,8 @@ common operations you can perform on linked list:
 
 **Additions**
 - `add`: grow the list by adding items to the end of the list.
-- `addHead`: Similar to our add method above, we always know the position of the head, so no iteration necessary.
-- `insertAfter`: have to iterate over the entire list to find the target node that your value should be inserted after.
 **Removals**
 - `remove`: will always remove from a given position in the list.
-
 **Search**
 - `contains`: will search the list for a value.
 
@@ -39,18 +34,12 @@ common operations you can perform on linked list:
 
 **Additions**
 - `add`: grow the list by adding items to the end of the list.
-- `addHead`: Similar to our add method above, we always know the position of the head, so no iteration necessary.
-- `insertAfter`: ave to iterate over the entire list to find the target node that your value should be inserted after.
-- `insertLast`: adds an element at the end of the list.
 **Removals**
 - `remove`: will always remove from a given position in the list.
-- `removeLast`: deletes an element from the end of the list.
 **Search**
 - `contains`: will search the list for a value.
 **Display**
 - `display`: displays the complete list in a forward manner.
-- `displayReverse`: displays the complete list in a backward manner.
-
 
 ### Definition Circular Linked List
 
