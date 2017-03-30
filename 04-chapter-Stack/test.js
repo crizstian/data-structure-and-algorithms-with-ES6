@@ -2,7 +2,7 @@ const {stack} = require('./index')
 
 function checkBalancedExpression (e) {
   const s = stack()
-  let balanced = false
+  let balanced = true
 
   for (const key in e) {
     if (e[key] === '(') {
@@ -13,11 +13,9 @@ function checkBalancedExpression (e) {
       }
       s.pop()
     }
-    if (s.length() > 0) {
+  }
+  if (s.length() > 0) {
       balanced = false
-    } else {
-      balanced = true
-    }
   }
   return balanced
 }
