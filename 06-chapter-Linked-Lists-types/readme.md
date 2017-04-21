@@ -2,8 +2,8 @@
 
 ### Code Examples
 
-- [Single, Double, Circular, Linked List, Data Structure]('./linked.proto.module.js')
-- [Import complete module]('./index')
+- [Single, Double, Circular, Linked List, Data Structure](./linked.proto.module.js)
+- [Import complete module](./index)
 
 ### Definition Linked List
 
