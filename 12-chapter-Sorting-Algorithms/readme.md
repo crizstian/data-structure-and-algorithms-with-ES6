@@ -2,8 +2,8 @@
 
 ### Code Examples
 - [Basic Sorting Algorithms](./basic-sort.js)
-- [Advanced Sorting Algorithms - Quick Sort](./quick-sort.js)
-- [Advanced Sorting Algorithms - Merge Sort](./merge-sort.js)
+- [Advanced Sorting Algorithms - Quick Sort](./quick-sort.module.js)
+- [Advanced Sorting Algorithms - Merge Sort](./merge-sort.module.js)
 - [Module](./sort-module.js)
 - [Implentation](./implementation.js)
 - [Import Module](./index.js)
