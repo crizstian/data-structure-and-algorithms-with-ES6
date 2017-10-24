@@ -44,8 +44,8 @@ There are several ways to add a new element to the array for example:
 grades.push(element);
 grades[grades.length + 1] = grade;
 
-// use of shift() method will insert a new element at the front of the array.
-grades.shift(grade);
+// use of unshift() method will insert a new element at the front of the array.
+grades.unshift(grade);
 
 //use of the splice() method will insert a new element at the position indicated.
 grades.splice(position, 0, grade);
