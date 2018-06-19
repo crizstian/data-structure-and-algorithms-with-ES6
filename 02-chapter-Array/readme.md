@@ -19,10 +19,19 @@ const myArray = [1, 'one', {some: 'object'}, new Date()]
 **Creating an array**
 
 ```
+/**** create new variable ****/
 const grades = [1,2,3];          // this is the best way to create an array.
 const grades = new Array(1,2,3); // use of the constructor.
 const grades = new Array(3);     // will initialize the array with the length of 3.
+const newGradesArray = [...grades, grade]; 	 // will declare the newGradesArray variable and assign the values from the grades array and from grade.
+/**** create new variable ****/
+
+/**** change const to let ****/
+let grades = [1,2,3];          // this is the best way to create an array.
+let grades = new Array(1,2,3); // use of the constructor.
+let grades = new Array(3);     // will initialize the array with the length of 3.
 grades = [...grades, grade]; 	 // will reinstantiate the grades variable.
+/**** change const to let ****/
 
 // use of the concat() function.
 const a = [1,2,3];
