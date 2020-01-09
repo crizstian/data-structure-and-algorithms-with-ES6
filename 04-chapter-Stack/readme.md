@@ -10,7 +10,7 @@ Pattern type: Last item In is the First item Out (LIFO)
 
 ![](https://cdn-images-1.medium.com/max/800/0*S3Kr9Cpm16ZmCEad.png)
 
-common operations you can perform on graphs:
+common operations you can perform on stacks:
 - `push`: adds a new element to the stack
 - `pop`: remove the last item pushed from the stack
 - `peek`: returns the last item pushed to stack
