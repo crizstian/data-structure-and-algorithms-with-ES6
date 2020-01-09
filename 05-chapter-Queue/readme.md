@@ -11,7 +11,7 @@ A queue is an example of a first-in, first-out (FIFO) data structure. Queues are
 
 ![](https://cdn-images-1.medium.com/max/800/0*SFoM_gyGXk8MIfl4.png)
 
-common operations you can perform on graphs:
+common operations you can perform on queues:
 - `enqueue`: adds a new element to the queue at the last position
 - `dequeue`: remove the first item from the queue
 - `front`: returns the first item pushed to queue
